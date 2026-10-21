@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Currency converter with today's exchange rates | RateNote</title>
+<meta name="description" content="Convert between 160 currencies at the mid-market rate, refreshed daily. Free, no sign-up, works on any device.">
+<meta name="theme-color" content="#e9efe8">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="ad-band"><div class="ad ad--leaderboard" data-ad="topBanner" data-ad-size="728 × 90" data-ad-size-mobile="320 × 100" data-ad-format="horizontal"></div></div>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="/"><img src="/img/favicon.svg" alt="" width="34" height="34">RateNote</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="/" aria-current="page">Converter</a></li>
+        <li><a href="/rates">Exchange rates</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="page">
+  <div class="rail rail--left"><div class="ad ad--skyscraper" data-ad="railLeft" data-ad-size="160 × 600" data-ad-format="vertical"></div></div>
+  <main id="main">
+    <section class="hero" aria-labelledby="convert-heading">
+      <h1 id="convert-heading">Convert money at today’s rate</h1>
+      <p class="hero__lede">Mid-market rates for 160 currencies, refreshed every day. Type an amount and pick two currencies.</p>
+
+      <div class="note">
+        <div class="microprint microprint--top" aria-hidden="true">RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED</div>
+        <form class="converter" id="converter" novalidate>
+          <div class="field">
+            <label for="amount">Amount</label>
+            <input id="amount" name="amount" type="text" inputmode="decimal" autocomplete="off" spellcheck="false" value="100" aria-describedby="amount-hint">
+            <span class="field__hint" id="amount-hint" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="from">From</label>
+            <select id="from" name="from" disabled><option value="USD">US Dollar (USD)</option></select>
+            <span class="field__hint"></span>
+          </div>
+          <button class="swap" id="swap" type="button" aria-label="Swap currencies" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h14M14 3l4 4-4 4M20 17H6M10 13l-4 4 4 4"/></svg>
+          </button>
+          <div class="field">
+            <label for="to">To</label>
+            <select id="to" name="to" disabled><option value="EUR">Euro (EUR)</option></select>
+            <span class="field__hint"></span>
+          </div>
+        </form>
+
+        <div class="result" id="result" aria-live="polite">
+          <p class="result__from" id="result-from"></p>
+          <p class="result__to" id="result-to"></p>
+          <p class="result__rates" id="result-rates"></p>
+          <div class="result__meta">
+            <p id="updated"></p>
+            <button class="button" id="copy" type="button" hidden>Copy result</button>
+          </div>
+        </div>
+        <div class="microprint microprint--bottom" aria-hidden="true">RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED RATENOTE USD EUR GBP JPY CHF AUD CAD CNY INR AED</div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="majors-heading">
+      <h2 id="majors-heading">The same amount in other currencies</h2>
+      <div class="table-wrap">
+        <table class="rates-table">
+          <caption id="majors-caption">Loading…</caption>
+          <thead><tr><th scope="col">Currency</th><th scope="col" class="num">Amount</th><th scope="col" class="num">Rate</th></tr></thead>
+          <tbody id="majors-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="ad-tiles section">
+      <div class="ad ad--rectangle" data-ad="tile1" data-ad-size="300 × 250" data-ad-format="rectangle"></div>
+      <div class="ad ad--rectangle" data-ad="tile2" data-ad-size="300 × 250" data-ad-format="rectangle"></div>
+      <div class="ad ad--rectangle" data-ad="tile3" data-ad-size="300 × 250" data-ad-format="rectangle"></div>
+      <div class="ad ad--rectangle" data-ad="tile4" data-ad-size="300 × 250" data-ad-format="rectangle"></div>
+    </div>
+
+    <section class="section" aria-labelledby="pairs-heading">
+      <h2 id="pairs-heading">Popular conversions</h2>
+      <p class="section__intro">Pick a pair to load it into the converter.</p>
+      <ul class="pairs">
+        <li><a href="/?amount=100&amp;from=USD&amp;to=EUR" data-pair="USD-EUR" data-no-interstitial><span>US dollar to euro</span><span class="pair-code">USD/EUR</span></a></li>
+        <li><a href="/?amount=100&amp;from=EUR&amp;to=USD" data-pair="EUR-USD" data-no-interstitial><span>Euro to US dollar</span><span class="pair-code">EUR/USD</span></a></li>
+        <li><a href="/?amount=100&amp;from=GBP&amp;to=USD" data-pair="GBP-USD" data-no-interstitial><span>British pound to US dollar</span><span class="pair-code">GBP/USD</span></a></li>
+        <li><a href="/?amount=100&amp;from=USD&amp;to=GBP" data-pair="USD-GBP" data-no-interstitial><span>US dollar to British pound</span><span class="pair-code">USD/GBP</span></a></li>
+        <li><a href="/?amount=100&amp;from=GBP&amp;to=EUR" data-pair="GBP-EUR" data-no-interstitial><span>British pound to euro</span><span class="pair-code">GBP/EUR</span></a></li>
+        <li><a href="/?amount=100&amp;from=EUR&amp;to=GBP" data-pair="EUR-GBP" data-no-interstitial><span>Euro to British pound</span><span class="pair-code">EUR/GBP</span></a></li>
+        <li><a href="/?amount=100&amp;from=USD&amp;to=JPY" data-pair="USD-JPY" data-no-interstitial><span>US dollar to Japanese yen</span><span class="pair-code">USD/JPY</span></a></li>
+        <li><a href="/?amount=100&amp;from=USD&amp;to=INR" data-pair="USD-INR" data-no-interstitial><span>US dollar to Indian rupee</span><span class="pair-code">USD/INR</span></a></li>
+        <li><a href="/?amount=100&amp;from=USD&amp;to=PKR" data-pair="USD-PKR" data-no-interstitial><span>US dollar to Pakistani rupee</span><span class="pair-code">USD/PKR</span></a></li>
+        <li><a href="/?amount=100&amp;from=AED&amp;to=INR" data-pair="AED-INR" data-no-interstitial><span>UAE dirham to Indian rupee</span><span class="pair-code">AED/INR</span></a></li>
+        <li><a href="/?amount=100&amp;from=SAR&amp;to=PKR" data-pair="SAR-PKR" data-no-interstitial><span>Saudi riyal to Pakistani rupee</span><span class="pair-code">SAR/PKR</span></a></li>
+        <li><a href="/?amount=100&amp;from=USD&amp;to=CAD" data-pair="USD-CAD" data-no-interstitial><span>US dollar to Canadian dollar</span><span class="pair-code">USD/CAD</span></a></li>
+        <li><a href="/?amount=100&amp;from=AUD&amp;to=USD" data-pair="AUD-USD" data-no-interstitial><span>Australian dollar to US dollar</span><span class="pair-code">AUD/USD</span></a></li>
+        <li><a href="/?amount=100&amp;from=USD&amp;to=MXN" data-pair="USD-MXN" data-no-interstitial><span>US dollar to Mexican peso</span><span class="pair-code">USD/MXN</span></a></li>
+        <li><a href="/?amount=100&amp;from=EUR&amp;to=CHF" data-pair="EUR-CHF" data-no-interstitial><span>Euro to Swiss franc</span><span class="pair-code">EUR/CHF</span></a></li>
+        <li><a href="/?amount=100&amp;from=USD&amp;to=CNY" data-pair="USD-CNY" data-no-interstitial><span>US dollar to Chinese yuan</span><span class="pair-code">USD/CNY</span></a></li>
+        <li><a href="/?amount=100&amp;from=GBP&amp;to=INR" data-pair="GBP-INR" data-no-interstitial><span>British pound to Indian rupee</span><span class="pair-code">GBP/INR</span></a></li>
+        <li><a href="/?amount=100&amp;from=EUR&amp;to=TRY" data-pair="EUR-TRY" data-no-interstitial><span>Euro to Turkish lira</span><span class="pair-code">EUR/TRY</span></a></li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="guide-heading">
+      <h2 id="guide-heading">Reading the rate</h2>
+      <div class="guide">
+        <div>
+          <h3>What the mid-market rate is</h3>
+          <p>It’s the midpoint between the price banks pay to buy a currency and the price they sell it for. It’s the fairest reference point, and it’s the rate this converter uses.</p>
+        </div>
+        <div>
+          <h3>Why your bank quotes a different number</h3>
+          <p>Banks, card providers and exchange counters add a margin on top of the mid-market rate, and some add a fee as well. Compare their quote with the result here to see how much you’re paying.</p>
+        </div>
+        <div>
+          <h3>How often the rates change</h3>
+          <p>Currency markets move all day on weekdays. The rates here are refreshed once a day, which is right for budgeting, invoices and travel planning but not for trading.</p>
+        </div>
+        <div>
+          <h3>Sharing a conversion</h3>
+          <p>The page address updates as you convert, so you can bookmark it or send it to someone. Use “Copy result” to paste the figure into a message or spreadsheet.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" aria-labelledby="faq-heading">
+      <h2 id="faq-heading">Questions</h2>
+      <details>
+        <summary>Is the converter free?</summary>
+        <p>Yes. There’s no sign-up and no limit on how many conversions you make. The site is paid for by the ads you see on the page.</p>
+      </details>
+      <details>
+        <summary>Where do the exchange rates come from?</summary>
+        <p>Rates come from <a href="https://www.exchangerate-api.com" target="_blank" rel="noopener">ExchangeRate-API</a>, which publishes daily reference rates for about 160 currencies. If it can’t be reached, the converter falls back to European Central Bank rates for around 30 major currencies.</p>
+      </details>
+      <details>
+        <summary>Can I use these rates to pay or get paid?</summary>
+        <p>Use them as a guide. The amount you actually pay or receive depends on the rate and fees your bank or payment service charges at the moment the money moves.</p>
+      </details>
+      <details>
+        <summary>Does it work offline?</summary>
+        <p>The last rates you loaded are saved in your browser. If your connection drops, the converter uses those and tells you when they were last updated.</p>
+      </details>
+      <details>
+        <summary>Which currencies are listed first?</summary>
+        <p>The currencies people convert most often appear under “Popular” at the top of each list. Every other currency follows in alphabetical order by name.</p>
+      </details>
+    </section>
+  </main>
+  <div class="rail rail--right"><div class="ad ad--halfpage" data-ad="railRight" data-ad-size="300 × 600" data-ad-format="vertical"></div></div>
+</div>
+<div class="ad-band ad-band--footer"><div class="ad ad--leaderboard" data-ad="footerBanner" data-ad-size="728 × 90" data-ad-size-mobile="320 × 100" data-ad-format="horizontal"></div></div>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p>Rates are mid-market reference rates for information only. They aren't an offer to buy or sell currency, and your bank or card provider will use its own rate.</p>
+    <ul>
+      <li><a href="/">Converter</a></li>
+      <li><a href="/rates">Exchange rates</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/privacy">Privacy policy</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="/js/ads-config.js"></script>
+<script src="/js/ads.js" defer></script>
+<script src="/js/rates.js" defer></script>
+<script src="/js/converter.js" defer></script>
+</body>
+</html>

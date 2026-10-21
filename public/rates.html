@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exchange rates for every currency | RateNote</title>
+<meta name="description" content="Today’s mid-market exchange rates for 160 currencies against any base currency. Search by name or code.">
+<meta name="theme-color" content="#e9efe8">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="ad-band"><div class="ad ad--leaderboard" data-ad="topBanner" data-ad-size="728 × 90" data-ad-size-mobile="320 × 100" data-ad-format="horizontal"></div></div>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="brand" href="/"><img src="/img/favicon.svg" alt="" width="34" height="34">RateNote</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="/">Converter</a></li>
+        <li><a href="/rates" aria-current="page">Exchange rates</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="page">
+  <div class="rail rail--left"><div class="ad ad--skyscraper" data-ad="railLeft" data-ad-size="160 × 600" data-ad-format="vertical"></div></div>
+  <main id="main">
+    <section aria-labelledby="rates-heading">
+      <div class="prose">
+        <h1 id="rates-heading">Today’s exchange rates</h1>
+        <p class="hero__lede">Every currency against the one you choose. Select a row to convert an amount.</p>
+      </div>
+      <div class="toolbar">
+        <div class="field">
+          <label for="base">Base currency</label>
+          <select id="base" disabled><option value="USD">US Dollar (USD)</option></select>
+        </div>
+        <div class="field">
+          <label for="filter">Find a currency</label>
+          <input id="filter" type="search" placeholder="e.g. yen or JPY" autocomplete="off" disabled>
+        </div>
+      </div>
+      <p id="rates-status" aria-live="polite"></p>
+      <div class="table-wrap">
+        <table class="rates-table">
+          <thead><tr><th scope="col">Currency</th><th scope="col" class="num" id="col-forward">1 USD buys</th><th scope="col" class="num" id="col-back">Cost of 1 unit in USD</th></tr></thead>
+          <tbody id="rates-body"></tbody>
+        </table>
+      </div>
+      <p class="section__intro" id="updated"></p>
+    </section>
+
+    <div class="ad-tiles section">
+      <div class="ad ad--rectangle" data-ad="tile1" data-ad-size="300 × 250" data-ad-format="rectangle"></div>
+      <div class="ad ad--rectangle" data-ad="tile2" data-ad-size="300 × 250" data-ad-format="rectangle"></div>
+      <div class="ad ad--rectangle" data-ad="tile3" data-ad-size="300 × 250" data-ad-format="rectangle"></div>
+      <div class="ad ad--rectangle" data-ad="tile4" data-ad-size="300 × 250" data-ad-format="rectangle"></div>
+    </div>
+  </main>
+  <div class="rail rail--right"><div class="ad ad--halfpage" data-ad="railRight" data-ad-size="300 × 600" data-ad-format="vertical"></div></div>
+</div>
+<div class="ad-band ad-band--footer"><div class="ad ad--leaderboard" data-ad="footerBanner" data-ad-size="728 × 90" data-ad-size-mobile="320 × 100" data-ad-format="horizontal"></div></div>
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p>Rates are mid-market reference rates for information only. They aren't an offer to buy or sell currency, and your bank or card provider will use its own rate.</p>
+    <ul>
+      <li><a href="/">Converter</a></li>
+      <li><a href="/rates">Exchange rates</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/privacy">Privacy policy</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="/js/ads-config.js"></script>
+<script src="/js/ads.js" defer></script>
+<script src="/js/rates.js" defer></script>
+<script src="/js/rates-page.js" defer></script>
+</body>
+</html>
