@@ -3,8 +3,7 @@
   "name": "currencyconverter",
   "compatibility_date": "2026-10-01",
   "routes": [
-    { "pattern": "rateconverter.online", "custom_domain": true },
-    { "pattern": "www.rateconverter.online", "custom_domain": true }
+    { "pattern": "rateconverter.online", "custom_domain": true }
   ],
   "assets": {
     "directory": "./public",

@@ -63,7 +63,7 @@ Google requires a certified consent banner for visitors from the EEA, UK and Swi
 npx wrangler deploy
 ```
 
-Clean URLs work as-is: `/rates` serves `rates.html` and unknown paths show `404.html`. `public/_headers` sets security headers and cache times.
+The site is served at https://rateconverter.online, set by `routes` in `wrangler.jsonc`. The `workers.dev` address is turned off. Clean URLs work as-is: `/rates` serves `rates.html` and unknown paths show `404.html`. `public/_headers` sets security headers and cache times.
 
 ## Running locally
 
