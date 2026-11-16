@@ -2,6 +2,10 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "currencyconverter",
   "compatibility_date": "2026-10-01",
+  "routes": [
+    { "pattern": "rateconverter.online", "custom_domain": true },
+    { "pattern": "www.rateconverter.online", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./public",
     "not_found_handling": "404-page",
