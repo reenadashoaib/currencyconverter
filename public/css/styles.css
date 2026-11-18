@@ -417,6 +417,14 @@ main { min-width: 0; padding: 32px 0 56px; }
   border: 1px dashed #8fa196;
 }
 
+/* Empty ad spaces take no room; ads.js fills the ones that have an ad unit */
+.ad-band:has(> .ad:empty),
+.rail:has(> .ad:empty),
+.ad-tiles:not(:has(.ad:not(:empty))) { display: none; }
+@media (min-width: 1280px) {
+  .page:not(:has(.rail .ad:not(:empty))) { grid-template-columns: minmax(0, 1080px); justify-content: center; }
+}
+
 /* Sizes are reserved up front so ads never push content around */
 .ad--leaderboard { width: 728px; height: calc(90px + 15px); }
 .ad--leaderboard .ad__slot { height: 90px; }
