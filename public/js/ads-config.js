@@ -10,11 +10,11 @@
  *    See README.md for details.
  */
 window.AD_CONFIG = {
-  adsenseClient: "",
+  adsenseClient: "ca-pub-8884353000483064",
 
   // Show striped "ad space" boxes where no ad is configured yet.
   // Set to false before going live so empty slots collapse.
-  showPlaceholders: true,
+  showPlaceholders: false,
 
   slots: {
     topBanner: "",      // 728×90 desktop, 320×100 mobile, top of every page

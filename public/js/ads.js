@@ -24,12 +24,12 @@
   }
 
   function loadAdsense() {
-    if (document.querySelector("script[data-adsense]")) return;
+    // The pages already include the AdSense script in <head>; only add it if it's missing.
+    if (document.querySelector('script[src*="adsbygoogle.js"]')) return;
     var script = document.createElement("script");
     script.async = true;
     script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + config.adsenseClient;
     script.crossOrigin = "anonymous";
-    script.setAttribute("data-adsense", "");
     document.head.appendChild(script);
   }
 

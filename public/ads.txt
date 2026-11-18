@@ -1,3 +1,1 @@
-# Replace pub-0000000000000000 with your AdSense publisher ID (Account > Account information),
-# then delete these comment lines. AdSense checks this file at https://your-domain/ads.txt.
-# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+google.com, pub-8884353000483064, DIRECT, f08c47fec0942fa0
